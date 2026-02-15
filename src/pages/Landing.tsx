@@ -55,7 +55,7 @@ const Landing = () => {
             </Link>
             <Link
               to="/learn"
-              className="text-sm font-medium bg-terracotta text-terracotta-foreground px-4 py-2 rounded-md hover:opacity-90 transition-opacity"
+              className="text-sm font-medium bg-olive text-terracotta-foreground px-4 py-2 rounded-md hover:opacity-90 transition-opacity"
             >
               Start Learning
             </Link>
@@ -74,7 +74,7 @@ const Landing = () => {
           >
             Learn photography
             <br />
-            <span className="text-terracotta">by doing.</span>
+            <span className="text-olive">by doing.</span>
           </motion.h1>
           <motion.p
             className="mt-7 text-base md:text-lg text-landing-muted max-w-md mx-auto leading-relaxed"
@@ -93,7 +93,7 @@ const Landing = () => {
           >
             <Link
               to="/learn"
-              className="bg-terracotta text-terracotta-foreground font-medium text-sm px-7 py-3 rounded-md hover:opacity-90 transition-opacity"
+              className="bg-olive text-terracotta-foreground font-medium text-sm px-7 py-3 rounded-md hover:opacity-90 transition-opacity"
             >
               Start Learning — Free
             </Link>
@@ -213,7 +213,7 @@ const Landing = () => {
           >
             Your phone is enough.
             <br />
-            <span className="text-terracotta">Start today.</span>
+            <span className="text-olive">Start today.</span>
           </motion.h2>
           <motion.div
             variants={fade}
@@ -224,7 +224,7 @@ const Landing = () => {
           >
             <Link
               to="/learn"
-              className="inline-block bg-terracotta text-terracotta-foreground font-medium text-sm px-8 py-3.5 rounded-md hover:opacity-90 transition-opacity"
+              className="inline-block bg-olive text-terracotta-foreground font-medium text-sm px-8 py-3.5 rounded-md hover:opacity-90 transition-opacity"
             >
               Start Learning — Free
             </Link>
