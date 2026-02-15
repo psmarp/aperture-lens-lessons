@@ -30,8 +30,8 @@ export function LessonFeedback({ lesson, feedback, loading, onContinue, onRetry 
         <div className="relative">
           <Loader2 className="h-12 w-12 text-primary animate-spin" />
         </div>
-        <p className="mt-6 font-serif text-lg text-foreground">Analyzing your photograph…</p>
-        <p className="mt-2 text-sm text-muted-foreground font-sans">Our AI is reviewing your composition, lighting, and technique</p>
+        <p className="mt-6 font-display text-lg text-foreground">Analyzing your photograph…</p>
+        <p className="mt-2 text-sm text-muted-foreground font-body">Our AI is reviewing your composition, lighting, and technique</p>
       </motion.div>
     );
   }
@@ -47,18 +47,18 @@ export function LessonFeedback({ lesson, feedback, loading, onContinue, onRetry 
       transition={{ duration: 0.5 }}
       className="max-w-2xl mx-auto"
     >
-      <span className="inline-block text-[11px] uppercase tracking-[0.2em] font-sans font-medium text-primary mb-3">
+      <span className="inline-block text-[11px] uppercase tracking-[0.2em] font-body font-medium text-olive mb-3">
         Feedback
       </span>
-      <h2 className="font-serif text-3xl text-foreground mb-8">{lesson.title}</h2>
+      <h2 className="font-display text-3xl text-foreground mb-8">{lesson.title}</h2>
 
       {/* Rating + Badge */}
       <div className="flex items-center gap-6 mb-8">
         <StarRating rating={feedback.rating} />
         <span
-          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-sans font-semibold ${
+          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-body font-semibold ${
             passed
-              ? "bg-primary/10 text-primary"
+              ? "bg-olive/10 text-olive"
               : "bg-destructive/10 text-destructive"
           }`}
         >
@@ -69,12 +69,12 @@ export function LessonFeedback({ lesson, feedback, loading, onContinue, onRetry 
 
       {/* Strengths */}
       <div className="card-elevated p-5 mb-4">
-        <h3 className="text-sm font-sans font-semibold uppercase tracking-wider text-foreground mb-3">
+        <h3 className="text-sm font-body font-semibold uppercase tracking-wider text-foreground mb-3">
           Strengths
         </h3>
         <ul className="space-y-2">
           {feedback.strengths.map((s, i) => (
-            <li key={i} className="flex items-start gap-2 text-sm font-sans text-secondary-foreground">
+            <li key={i} className="flex items-start gap-2 text-sm font-body text-secondary-foreground">
               <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
               {s}
             </li>
@@ -84,12 +84,12 @@ export function LessonFeedback({ lesson, feedback, loading, onContinue, onRetry 
 
       {/* Improvements */}
       <div className="card-elevated p-5 mb-6">
-        <h3 className="text-sm font-sans font-semibold uppercase tracking-wider text-foreground mb-3">
+        <h3 className="text-sm font-body font-semibold uppercase tracking-wider text-foreground mb-3">
           Areas to Improve
         </h3>
         <ul className="space-y-2">
           {feedback.improvements.map((s, i) => (
-            <li key={i} className="flex items-start gap-2 text-sm font-sans text-secondary-foreground">
+            <li key={i} className="flex items-start gap-2 text-sm font-body text-secondary-foreground">
               <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-muted-foreground shrink-0" />
               {s}
             </li>
@@ -98,13 +98,13 @@ export function LessonFeedback({ lesson, feedback, loading, onContinue, onRetry 
       </div>
 
       {/* Summary */}
-      <p className="font-serif text-base text-secondary-foreground leading-relaxed mb-10">{feedback.summary}</p>
+      <p className="font-display text-base text-secondary-foreground leading-relaxed mb-10">{feedback.summary}</p>
 
       {/* Action */}
       {passed ? (
         <button
           onClick={onContinue}
-          className="w-full flex items-center justify-center gap-2 py-4 rounded-lg bg-primary text-primary-foreground font-sans font-semibold text-sm tracking-wide hover:brightness-110 transition-all"
+          className="w-full flex items-center justify-center gap-2 py-4 rounded-lg bg-olive text-primary-foreground font-body font-semibold text-sm tracking-wide hover:opacity-90 transition-all"
         >
           Continue to Next Lesson
           <ArrowRight className="h-4 w-4" />
@@ -112,7 +112,7 @@ export function LessonFeedback({ lesson, feedback, loading, onContinue, onRetry 
       ) : (
         <button
           onClick={onRetry}
-          className="w-full flex items-center justify-center gap-2 py-4 rounded-lg border border-border text-foreground font-sans font-semibold text-sm hover:bg-secondary transition-colors"
+          className="w-full flex items-center justify-center gap-2 py-4 rounded-lg border border-border text-foreground font-body font-semibold text-sm hover:bg-secondary transition-colors"
         >
           <RotateCcw className="h-4 w-4" /> Upload a New Photo
         </button>
