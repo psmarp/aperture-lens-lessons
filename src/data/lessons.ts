@@ -5,11 +5,49 @@ import framing from "@/assets/lesson-framing.jpg";
 import colorContrast from "@/assets/lesson-color-contrast.jpg";
 import storytelling from "@/assets/lesson-storytelling.jpg";
 
+// Lesson example images
+import rotGrid from "@/assets/lessons/rot-grid-overlay.jpg";
+import rotPortrait from "@/assets/lessons/rot-portrait.jpg";
+import rotHorizon from "@/assets/lessons/rot-horizon.jpg";
+import rotComparison from "@/assets/lessons/rot-comparison.jpg";
+
+import llRoad from "@/assets/lessons/ll-road.jpg";
+import llStaircase from "@/assets/lessons/ll-staircase.jpg";
+import llTracks from "@/assets/lessons/ll-tracks.jpg";
+import llPier from "@/assets/lessons/ll-pier.jpg";
+
+import ldSidelight from "@/assets/lessons/ld-sidelight.jpg";
+import ldBacklight from "@/assets/lessons/ld-backlight.jpg";
+import ldGoldenhour from "@/assets/lessons/ld-goldenhour.jpg";
+import ldFrontlight from "@/assets/lessons/ld-frontlight.jpg";
+
+import flArchway from "@/assets/lessons/fl-archway.jpg";
+import flWindow from "@/assets/lessons/fl-window.jpg";
+import flBranches from "@/assets/lessons/fl-branches.jpg";
+import flLayers from "@/assets/lessons/fl-layers.jpg";
+
+import ccColorpop from "@/assets/lessons/cc-colorpop.jpg";
+import ccComplementary from "@/assets/lessons/cc-complementary.jpg";
+import ccCoolpalette from "@/assets/lessons/cc-coolpalette.jpg";
+import ccWarmpalette from "@/assets/lessons/cc-warmpalette.jpg";
+
+import stBench from "@/assets/lessons/st-bench.jpg";
+import stFootprints from "@/assets/lessons/st-footprints.jpg";
+import stReaching from "@/assets/lessons/st-reaching.jpg";
+import stCafe from "@/assets/lessons/st-cafe.jpg";
+
+export interface LessonImage {
+  src: string;
+  alt: string;
+  caption: string;
+}
+
 export interface Lesson {
   id: string;
   title: string;
   category: string;
   image: string;
+  images: LessonImage[];
   description: string[];
   tips: string[];
   assignment: string;
@@ -22,6 +60,12 @@ export const lessons: Lesson[] = [
     title: "The Rule of Thirds",
     category: "Composition",
     image: ruleOfThirds,
+    images: [
+      { src: rotGrid, alt: "Rule of thirds grid overlay on a landscape", caption: "The thirds grid divides your frame into 9 equal sections. Place your subject at the intersection points for a dynamic composition." },
+      { src: rotPortrait, alt: "Portrait using rule of thirds", caption: "In portraits, position the eyes along the upper third line — this creates a natural, engaging composition." },
+      { src: rotHorizon, alt: "Seascape with horizon on lower third", caption: "Place the horizon along the lower third to emphasize the sky, or the upper third to emphasize the foreground." },
+      { src: rotComparison, alt: "Centered vs rule of thirds comparison", caption: "Centered compositions feel static. Off-center placement along the thirds creates energy and visual interest." },
+    ],
     description: [
       "The Rule of Thirds is one of the most fundamental composition techniques in photography. Imagine dividing your frame into nine equal parts using two horizontal and two vertical lines — like a tic-tac-toe grid overlaid on your image.",
       "The idea is simple: place your main subject along one of these lines, or better yet, at one of the four intersection points. This creates a more dynamic, visually interesting composition than centering your subject.",
@@ -46,6 +90,12 @@ export const lessons: Lesson[] = [
     title: "Leading Lines",
     category: "Composition",
     image: leadingLines,
+    images: [
+      { src: llRoad, alt: "Desert road with leading lines", caption: "Roads are classic leading lines — they pull the viewer's eye from the foreground deep into the scene toward the vanishing point." },
+      { src: llStaircase, alt: "Spiral staircase with curved leading lines", caption: "Leading lines don't have to be straight. Curved lines like spiral staircases create a sense of flowing movement." },
+      { src: llTracks, alt: "Railway tracks converging in a forest", caption: "Parallel lines converging to a vanishing point create a powerful sense of depth and draw the eye irresistibly forward." },
+      { src: llPier, alt: "Wooden pier leading to a figure at sunset", caption: "Leading lines are most powerful when they guide the eye to a subject — here, the pier leads directly to the figure." },
+    ],
     description: [
       "Leading lines are one of the most powerful tools in a photographer's composition toolkit. They're lines within your image that guide the viewer's eye toward the main subject or deeper into the scene.",
       "These lines can be anything: roads, fences, rivers, staircases, shadows, rows of trees, or even the edge of a building. They create a visual pathway that draws attention exactly where you want it.",
@@ -70,6 +120,12 @@ export const lessons: Lesson[] = [
     title: "Understanding Light Direction",
     category: "Lighting",
     image: lightDirection,
+    images: [
+      { src: ldSidelight, alt: "Side lighting on a sculpture", caption: "Side light creates dramatic shadows and reveals texture and form. Notice how one side is illuminated while the other falls into shadow." },
+      { src: ldBacklight, alt: "Backlit silhouette at sunset", caption: "Backlighting creates silhouettes and rim light effects. Position your subject between you and the light source." },
+      { src: ldGoldenhour, alt: "Golden hour wheat field", caption: "Golden hour light is warm, soft, and directional — it wraps around subjects beautifully and creates long, dramatic shadows." },
+      { src: ldFrontlight, alt: "Cat in soft front light", caption: "Front light illuminates evenly but can look flat. It's great for showing detail and color but reduces the sense of depth." },
+    ],
     description: [
       "Light is the very essence of photography — the word literally means 'writing with light.' The direction light comes from dramatically changes the mood, dimension, and story of your photo.",
       "Front light illuminates your subject evenly but can look flat. Side light creates beautiful shadows and reveals texture and depth. Back light produces dramatic silhouettes and glowing rim effects, especially during golden hour.",
@@ -94,6 +150,12 @@ export const lessons: Lesson[] = [
     title: "Framing & Layers",
     category: "Composition",
     image: framing,
+    images: [
+      { src: flArchway, alt: "Subject framed by a stone archway", caption: "Doorways and archways are natural frames that draw the viewer's eye straight to the subject within." },
+      { src: flWindow, alt: "Landscape framed by a window", caption: "Windows create a frame-within-a-frame, adding context about the interior while directing focus to the view beyond." },
+      { src: flBranches, alt: "Mountain framed by tree branches", caption: "Foreground elements like branches can create soft, organic frames. They don't need to be sharp — blurred frames work beautifully." },
+      { src: flLayers, alt: "Photograph showing foreground, middle, and background layers", caption: "Layers create depth: blurred foreground flowers, a sharp subject in the middle ground, and a soft background." },
+    ],
     description: [
       "Natural framing is a technique where you use elements in your environment — doorways, windows, arches, branches, tunnels — to create a frame within your frame. This draws the viewer's eye directly to your subject.",
       "Framing adds depth by creating distinct layers: a foreground frame, a middle-ground subject, and often a background. These layers give your image a three-dimensional quality that flat compositions lack.",
@@ -118,6 +180,12 @@ export const lessons: Lesson[] = [
     title: "Color & Contrast",
     category: "Visual Design",
     image: colorContrast,
+    images: [
+      { src: ccComplementary, alt: "Orange leaves against blue sky", caption: "Complementary colors (opposite on the color wheel) create vibrant contrast. Orange and blue is one of the most striking combinations." },
+      { src: ccColorpop, alt: "Red umbrella on a gray street", caption: "A 'color pop' — a single vivid color against a muted background — creates an instant focal point." },
+      { src: ccCoolpalette, alt: "Misty blue lake scene", caption: "Cool, monochromatic palettes in blues and teals create calm, contemplative moods." },
+      { src: ccWarmpalette, alt: "Warm-toned market with spices", caption: "Warm color harmonies in golds, ambers, and rusts feel inviting and energetic." },
+    ],
     description: [
       "Color is one of the most emotional tools in photography. Complementary colors — those opposite each other on the color wheel, like blue and orange, red and green — create vibrant, eye-catching contrast when placed together.",
       "A 'color pop' happens when a single vivid color stands out against a muted or monochrome background. Think of a red umbrella on a gray street, or a yellow taxi against blue buildings. These moments create instant visual impact.",
@@ -142,6 +210,12 @@ export const lessons: Lesson[] = [
     title: "Telling a Story",
     category: "Storytelling",
     image: storytelling,
+    images: [
+      { src: stBench, alt: "Empty park bench with book and coffee", caption: "Objects left behind imply a person and a story — who was here? Where did they go? The viewer fills in the narrative." },
+      { src: stFootprints, alt: "Footprints in sand disappearing into fog", caption: "Leading somewhere unknown, footprints invite the viewer to wonder about the journey. Mystery is a powerful storytelling tool." },
+      { src: stReaching, alt: "Child reaching for a soap bubble", caption: "Moments of anticipation — right before something happens — create compelling narratives and emotional connection." },
+      { src: stCafe, alt: "Empty cafe with two coffee cups at night", caption: "Environmental details like two cups, empty chairs, and rain-soaked windows tell a story without showing any characters." },
+    ],
     description: [
       "The most compelling photographs don't just show — they suggest. They make the viewer wonder: What just happened? What's about to happen? Who was here? A great story-telling photo is an invitation to imagine.",
       "Look for moments of tension, anticipation, or aftermath. An empty chair with a half-finished cup of coffee. A child reaching for something just out of frame. Footprints disappearing into fog. These images are rich with narrative possibility.",

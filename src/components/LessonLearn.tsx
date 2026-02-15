@@ -1,6 +1,7 @@
 import { Lesson } from "@/data/lessons";
 import { motion } from "framer-motion";
 import { ArrowRight, Lightbulb } from "lucide-react";
+import { DeviceFrame } from "./DeviceFrame";
 
 interface LessonLearnProps {
   lesson: Lesson;
@@ -35,14 +36,46 @@ export function LessonLearn({ lesson, onReady }: LessonLearnProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
       </div>
 
-      {/* Theory paragraphs */}
-      <div className="space-y-5 mb-10">
-        {lesson.description.map((para, i) => (
-          <p key={i} className="font-body text-base leading-relaxed text-secondary-foreground">
-            {para}
-          </p>
-        ))}
-      </div>
+      {/* First paragraph */}
+      <p className="font-body text-base leading-relaxed text-secondary-foreground mb-8">
+        {lesson.description[0]}
+      </p>
+
+      {/* First two example images */}
+      {lesson.images.length >= 2 && (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <DeviceFrame image={lesson.images[0]} />
+          <DeviceFrame image={lesson.images[1]} />
+        </div>
+      )}
+
+      {/* Second paragraph */}
+      {lesson.description[1] && (
+        <p className="font-body text-base leading-relaxed text-secondary-foreground mb-8">
+          {lesson.description[1]}
+        </p>
+      )}
+
+      {/* Third example image - full width */}
+      {lesson.images.length >= 3 && (
+        <div className="mb-10">
+          <DeviceFrame image={lesson.images[2]} />
+        </div>
+      )}
+
+      {/* Third paragraph */}
+      {lesson.description[2] && (
+        <p className="font-body text-base leading-relaxed text-secondary-foreground mb-8">
+          {lesson.description[2]}
+        </p>
+      )}
+
+      {/* Fourth example image - full width */}
+      {lesson.images.length >= 4 && (
+        <div className="mb-10">
+          <DeviceFrame image={lesson.images[3]} />
+        </div>
+      )}
 
       {/* Tips card */}
       <div className="card-elevated p-6 mb-10">
