@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -53,6 +53,14 @@
     --surface-elevated: 220 12% 16%;
     --cream: 40 20% 90%;
     --cream-dim: 40 10% 65%;
+
+    /* Landing page accent */
+    --terracotta: 18 53% 53%;
+    --terracotta-foreground: 0 0% 100%;
+    --landing-bg: 50 20% 98%;
+    --landing-fg: 0 0% 10%;
+    --landing-muted: 30 5% 55%;
+    --landing-border: 30 10% 90%;
   }
 }
 

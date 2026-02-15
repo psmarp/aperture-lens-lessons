@@ -16,6 +16,8 @@ export default {
       fontFamily: {
         serif: ["'Playfair Display'", "serif"],
         sans: ["'Inter'", "sans-serif"],
+        "display": ["'DM Serif Display'", "serif"],
+        "body": ["'DM Sans'", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -63,6 +65,16 @@ export default {
         surface: {
           DEFAULT: "hsl(var(--surface))",
           elevated: "hsl(var(--surface-elevated))",
+        },
+        terracotta: {
+          DEFAULT: "hsl(var(--terracotta))",
+          foreground: "hsl(var(--terracotta-foreground))",
+        },
+        landing: {
+          bg: "hsl(var(--landing-bg))",
+          fg: "hsl(var(--landing-fg))",
+          muted: "hsl(var(--landing-muted))",
+          border: "hsl(var(--landing-border))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
