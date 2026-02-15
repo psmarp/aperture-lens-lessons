@@ -19,7 +19,7 @@ export function StarRating({ rating, max = 5 }: StarRatingProps) {
           <Star
             className={`h-7 w-7 ${
               i < rating
-                ? "fill-primary text-primary"
+                ? "fill-olive text-olive"
                 : "text-muted-foreground/30"
             }`}
           />

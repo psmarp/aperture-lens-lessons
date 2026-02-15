@@ -85,7 +85,7 @@ const Index = () => {
   };
 
   return (
-    <div className="flex h-screen bg-background overflow-hidden">
+    <div className="flex h-screen bg-background overflow-hidden font-body">
       <CurriculumSidebar
         progress={progress}
         currentLessonId={currentLessonId}
@@ -96,8 +96,8 @@ const Index = () => {
         {/* Top bar */}
         <header className="shrink-0 border-b border-border px-8 py-4 flex items-center gap-6">
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <Aperture className="h-5 w-5 text-primary" />
-            <span className="font-serif text-lg text-foreground">Aperture</span>
+            <Aperture className="h-5 w-5 text-olive" />
+            <span className="font-display text-lg text-foreground">Aperture</span>
           </Link>
           <div className="flex-1 max-w-xs">
             <ProgressBar completedCount={completedCount} />

@@ -26,11 +26,11 @@ export function CurriculumSidebar({
             animate={{ width: 280, opacity: 1 }}
             exit={{ width: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="h-full border-r border-border bg-card overflow-hidden"
+            className="h-full border-r border-border bg-background overflow-hidden"
           >
             <div className="p-6 w-[280px]">
-              <h2 className="font-serif text-lg text-foreground mb-1">Curriculum</h2>
-              <p className="text-xs text-muted-foreground mb-6 font-sans">6 lessons · Photography fundamentals</p>
+              <h2 className="font-display text-lg text-foreground mb-1">Curriculum</h2>
+              <p className="text-xs text-muted-foreground mb-6 font-body">6 lessons · Photography fundamentals</p>
               <nav className="space-y-1">
                 {lessons.map((lesson, i) => {
                   const prog = progress[lesson.id];
@@ -48,7 +48,7 @@ export function CurriculumSidebar({
                       }`}
                     >
                       <span
-                        className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-sans font-medium ${
+                        className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-body font-medium ${
                           isCompleted
                             ? "bg-primary text-primary-foreground"
                             : isActive
@@ -59,7 +59,7 @@ export function CurriculumSidebar({
                         {isCompleted ? <Check className="h-3.5 w-3.5" /> : i + 1}
                       </span>
                       <div className="min-w-0">
-                        <p className={`text-sm font-sans truncate ${isActive ? "text-foreground font-medium" : "text-secondary-foreground"}`}>
+                        <p className={`text-sm font-body truncate ${isActive ? "text-foreground font-medium" : "text-secondary-foreground"}`}>
                           {lesson.title}
                         </p>
                         <div className="flex items-center gap-2 mt-0.5">
@@ -84,7 +84,7 @@ export function CurriculumSidebar({
       </AnimatePresence>
       <button
         onClick={() => setCollapsed(!collapsed)}
-        className="absolute -right-4 top-8 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-border bg-card text-muted-foreground hover:text-foreground transition-colors"
+        className="absolute -right-4 top-8 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-border bg-background text-muted-foreground hover:text-foreground transition-colors"
       >
         {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
       </button>
