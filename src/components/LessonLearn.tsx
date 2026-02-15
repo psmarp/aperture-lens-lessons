@@ -38,7 +38,7 @@ export function LessonLearn({ lesson, onReady }: LessonLearnProps) {
       {/* Theory paragraphs */}
       <div className="space-y-5 mb-10">
         {lesson.description.map((para, i) => (
-          <p key={i} className="font-display text-base leading-relaxed text-secondary-foreground">
+          <p key={i} className="font-body text-base leading-relaxed text-secondary-foreground">
             {para}
           </p>
         ))}

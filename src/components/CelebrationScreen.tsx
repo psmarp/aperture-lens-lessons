@@ -33,7 +33,7 @@ export function CelebrationScreen({ progress, onRestart }: CelebrationScreenProp
       <h1 className="font-display text-4xl md:text-5xl text-foreground mb-4">
         Course Complete
       </h1>
-      <p className="font-display text-lg text-secondary-foreground mb-8 max-w-md mx-auto leading-relaxed">
+      <p className="font-body text-lg text-secondary-foreground mb-8 max-w-md mx-auto leading-relaxed">
         You've completed all six photography fundamentals. Your eye for composition, light, and storytelling has grown tremendously.
       </p>
 

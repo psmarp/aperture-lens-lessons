@@ -98,7 +98,7 @@ export function LessonFeedback({ lesson, feedback, loading, onContinue, onRetry 
       </div>
 
       {/* Summary */}
-      <p className="font-display text-base text-secondary-foreground leading-relaxed mb-10">{feedback.summary}</p>
+      <p className="font-body text-base text-secondary-foreground leading-relaxed mb-10">{feedback.summary}</p>
 
       {/* Action */}
       {passed ? (
