@@ -43,7 +43,7 @@ const Landing = () => {
       <nav className="fixed top-0 inset-x-0 z-50 bg-landing-bg/90 backdrop-blur-md">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <Aperture className="h-5 w-5 text-landing-fg" />
+            <Aperture className="h-5 w-5 text-olive" />
             <span className="font-display text-lg text-landing-fg">Aperture</span>
           </Link>
           <div className="flex items-center gap-5">
@@ -131,7 +131,7 @@ const Landing = () => {
                 viewport={{ once: true }}
                 custom={i + 1}
               >
-                <span className="font-display text-4xl text-terracotta/30 block mb-4">
+                <span className="font-display text-4xl text-olive/40 block mb-4">
                   {step.num}
                 </span>
                 <h3 className="font-display text-xl mb-3 text-landing-fg">{step.title}</h3>
@@ -168,13 +168,13 @@ const Landing = () => {
                 viewport={{ once: true }}
                 custom={i * 0.4}
               >
-                <span className="font-display text-2xl text-terracotta/40 w-8 text-center shrink-0">
+                <span className="font-display text-2xl text-olive/50 w-8 text-center shrink-0">
                   {i + 1}
                 </span>
                 <div className="flex-1 min-w-0">
                   <h3 className="font-display text-base md:text-lg text-landing-fg">{lesson.title}</h3>
                 </div>
-                <span className="shrink-0 text-[11px] tracking-wide uppercase text-landing-muted font-medium bg-landing-border/60 px-2.5 py-1 rounded-full">
+                <span className="shrink-0 text-[11px] tracking-wide uppercase text-olive font-medium bg-olive/10 px-2.5 py-1 rounded-full">
                   {lesson.category}
                 </span>
               </motion.div>

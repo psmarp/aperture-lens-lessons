@@ -70,6 +70,9 @@ export default {
           DEFAULT: "hsl(var(--terracotta))",
           foreground: "hsl(var(--terracotta-foreground))",
         },
+        olive: {
+          DEFAULT: "hsl(var(--olive))",
+        },
         landing: {
           bg: "hsl(var(--landing-bg))",
           fg: "hsl(var(--landing-fg))",
