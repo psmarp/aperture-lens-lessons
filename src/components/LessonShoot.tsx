@@ -36,7 +36,7 @@ export function LessonShoot({ lesson, onSubmit, onBack }: LessonShootProps) {
         Assignment
       </span>
       <h2 className="font-display text-3xl text-foreground mb-4">{lesson.title}</h2>
-      <p className="font-display text-base text-secondary-foreground mb-8 leading-relaxed">{lesson.assignment}</p>
+      <p className="font-body text-base text-secondary-foreground mb-8 leading-relaxed">{lesson.assignment}</p>
 
       {/* Criteria cards */}
       <div className="grid grid-cols-2 gap-3 mb-10">
