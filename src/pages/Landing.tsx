@@ -93,7 +93,7 @@ const Landing = () => {
           >
             <Link
               to="/learn"
-              className="bg-olive text-terracotta-foreground font-medium text-sm px-7 py-3 rounded-md hover:opacity-90 transition-opacity"
+              className="bg-terracotta text-terracotta-foreground font-medium text-sm px-7 py-3 rounded-md hover:opacity-90 transition-opacity"
             >
               Start Learning — Free
             </Link>
