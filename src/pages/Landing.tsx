@@ -93,7 +93,7 @@ const Landing = () => {
           >
             <Link
               to="/learn"
-              className="bg-purple-600 text-white font-medium text-sm px-7 py-3 rounded-md hover:bg-purple-700 transition-colors"
+              className="font-medium text-sm px-7 py-3 rounded-md transition-colors text-white" style={{ backgroundColor: '#C4704B' }}
             >
               Start Learning — Free
             </Link>
